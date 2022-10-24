@@ -5,8 +5,8 @@
 ## AD block Source
 
 - https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Shadowrocket/Advertising
-  - https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Shadowrocket/Advertising/Advertising.list
-  - https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Shadowrocket/Advertising/Advertising_Domain.list
+  - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list
+  - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising_Domain.list
 
 ## Proxy rule Source
 
@@ -17,3 +17,4 @@
 ## China
 
 - https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket/China
+  - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/China/China.list
