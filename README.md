@@ -18,3 +18,4 @@
 
 - https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket/China
   - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/China/China.list
+  - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/China/China_Domain.list
