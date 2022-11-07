@@ -1,4 +1,6 @@
-#!/bin/zsh
+#!/usr/bin/env bash
+
+set -o errexit
 
 TIME="$(date '+%Y-%m-%d %H:%M:%S %z')"
 MSG="update at $TIME"
@@ -12,7 +14,7 @@ fi
 if [[ -n $(git status --porcelain=v1 2>/dev/null) ]]; then
   git add .
   git commit -m "$MSG"
-  echo $MSG
+  echo "$MSG"
   git push
 else
   echo "clean, check at $TIME"
