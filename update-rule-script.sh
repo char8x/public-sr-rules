@@ -21,6 +21,18 @@ do
   fi
 done < "$REMOVE_FROM_ADVERTISING_DOMAIN"
 
+REMOVE_FROM_ADVERTISING="remove_from_advertising.list"
+# Add IFS= option before read command to prevent leading/trailing whitespace from being trimmed
+while IFS= read -r remove_ad_line
+do
+  if [[ $remove_ad_line =~ ^#.* ]]
+  then
+    echo "ignore $remove_ad_line"
+  else
+    sed -i '' "/$remove_ad_line/d" ./Advertising.list
+  fi
+done < "$REMOVE_FROM_ADVERTISING"
+
 # 禁用规则
 rg --passthru 'URL-REGEX' -r '# URL-REGEX' Advertising.list > temp && mv temp Advertising.list
 
