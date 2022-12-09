@@ -33,6 +33,18 @@ do
   fi
 done < "$REMOVE_FROM_ADVERTISING"
 
+REMOVE_FROM_CHINA_DOMAIN="remove_from_china_domain.list"
+# Add IFS= option before read command to prevent leading/trailing whitespace from being trimmed
+while IFS= read -r remove_china_domain
+do
+  if [[ $remove_china_domain =~ ^#.* ]]
+  then
+    echo "ignore $remove_china_domain"
+  else
+    sed -i '' "/$remove_china_domain/d" ./China_Domain.list
+  fi
+done < "$REMOVE_FROM_CHINA_DOMAIN"
+
 # 禁用规则
 rg --passthru 'URL-REGEX' -r '# URL-REGEX' Advertising.list > temp && mv temp Advertising.list
 
